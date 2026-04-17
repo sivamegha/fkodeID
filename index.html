@@ -9,13 +9,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300;700&family=Outfit:wght@400;900&display=swap');
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* src/index.css */
 @font-face {
-    font-family: 'Automata';
-    src: url('fonts/automata.ttf') format('truetype');
-    font-weight: normal;
+    font-family: 'Automata'; /* Name-ai simple-ah 'Automata' nu vechukonga */
     font-style: normal;
-}
-        body {
+    font-weight: normal;
+    /* src folder-kulla assets/fonts iruntha intha path correct */
+    src: url('fonts/AUTOMATA.woff') format('woff');
+}     body {
             background-color: #ffffff; 
             font-family: 'Outfit', sans-serif;
             display: flex;
@@ -62,7 +64,7 @@
 
         /* Branding Section */
         .header {
-                        font-family: 'automata', monospace;
+    font-family: 'Automata', sans-serif !important;
 
             
             padding: 30px 25px 0;
@@ -82,8 +84,8 @@ font-family: 'Automata', sans-serif;
             letter-spacing: 5px;
             text-transform: uppercase;
             border-left: 2px solid #ffffff;
-            padding-left: 30px;
-            padding-top: 10px;
+            padding-left: 20px;
+            padding-top: 3px;
         }
 
         /* Profile Area with Scanner Effect */
