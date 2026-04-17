@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FKode - Elite Industrial ID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300;700&family=Outfit:wght@400;900&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+@font-face {
+    font-family: 'Automata';
+    src: url('fonts/automata.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+        body {
+            background-color: #ffffff; 
+            font-family: 'Outfit', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* --- BACKGROUND DECORATION --- */
+        .bg-pattern {
+            position: absolute;
+            font-family: 'Chivo Mono', monospace;
+            font-size: 15vw;
+            color: rgba(255, 255, 255, 0.02);
+            white-space: nowrap;
+            z-index: 1;
+            user-select: none;
+            font-weight: 900;
+        }
+
+        /* --- THE ELITE CARD --- */
+        .elite-card {
+            width: 350px;
+            background: linear-gradient(145deg, #1a1a1a, #111111);
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.8);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* Top Design Accent */
+        .header-design {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: rgba(125, 120, 120, 0.03);
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+        }
+
+        /* Branding Section */
+        .header {
+                        font-family: 'automata', monospace;
+
+            
+            padding: 30px 25px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .logo-img {
+            width: 95px;
+            margin-bottom: 10px;
+        }
+
+        .comp-name {
+font-family: 'Automata', sans-serif;
+            font-size: 27px;
+            color: #ffffff;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            border-left: 2px solid #ffffff;
+            padding-left: 30px;
+            padding-top: 10px;
+        }
+
+        /* Profile Area with Scanner Effect */
+        .profile-area {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .photo-container {
+            width: 160px;
+            height: 160px;
+            background: #000;
+            padding: 8px;
+            position: relative;
+            border: 1px solid #333;
+        }
+
+        /* Corner Brackets for Photo */
+        .photo-container::before, .photo-container::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-color: #fff;
+            border-style: solid;
+        }
+
+        .photo-container::before { top: -5px; left: -5px; border-width: 2px 0 0 2px; }
+        .photo-container::after { bottom: -5px; right: -5px; border-width: 0 2px 2px 0; }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* User Info Section */
+        .info-panel {
+            padding: 30px 25px;
+            text-align: left;
+        }
+
+        .user-name {
+            font-size: 30px;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .user-role {
+            font-family: 'Chivo Mono', monospace;
+            font-size: 10px;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 10px 0 30px;
+            display: block;
+        }
+
+        /* Tech Details Grid */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .tech-item {
+            border-bottom: 1px solid #222;
+            padding-bottom: 8px;
+        }
+
+        .tech-item label {
+            font-size: 8px;
+            color: #444;
+            text-transform: uppercase;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .tech-item span {
+            font-size: 13px;
+            color: #aaa;
+            font-weight: 600;
+        }
+
+        /* Footer - Stealth Bar */
+        .footer-bar {
+            background: #fff;
+            color: #000;
+            padding: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bar span {
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .status-indicator {
+            width: 10px;
+            height: 10px;
+            background: #000;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="bg-pattern">FKODE.SOLUTION</div>
+
+    <div class="elite-card">
+        <div class="header-design"></div>
+
+        <div class="header">
+            <img src="images/image.png" alt="FK" class="logo-img">
+            <span class="comp-name">FKODE SOLUTION</span>
+        </div>
+
+        <div class="profile-area">
+            <div class="photo-container">
+                <img src="images/Sivaa.jpg" alt="Profile">
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <h1 class="user-name">Sivaneshwari</h1>
+            <span class="user-role">Full Stack Developer</span>
+
+           <div class="tech-grid">
+                <div class="tech-item">
+                    <label>Register ID</label>
+                    <span>#FKD-1024</span>
+                </div>
+                <div class="tech-item">
+                    <label>Phone No</label>
+                    <span>+91 62801 02036</span>
+                </div>
+                
+                <div class="tech-item">
+                    <label>Blood Group</label>
+                    <span>B+ POSITIVE</span>
+                </div>
+                <div class="tech-item">
+                    <label>Validity</label>
+                    <span>12/2026</span>
+                </div>
+
+                <div class="tech-item full-width">
+                    <label>Aadhaar No</label>
+                    <span>2345 6789 0123</span>
+                </div>
+
+                <div class="tech-item full-width">
+                    <label>Address</label>
+                    <span>Paramakudi, Ramanathapuram - 623707</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bar">
+            <span>Official Digital Access</span>
+            <div class="status-indicator"></div>
+        </div>
+    </div>
+
+</body>
+</html>
